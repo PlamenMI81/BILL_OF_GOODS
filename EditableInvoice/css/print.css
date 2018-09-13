@@ -1,0 +1,15 @@
+body {
+  background-color: unset !important;
+}
+
+#hiderow, .delete {
+  display: none !important;
+}
+
+.table {
+  /* box-shadow: unset !important; */
+}
+
+#image {
+  filter: grayscale(100%) !important;
+}

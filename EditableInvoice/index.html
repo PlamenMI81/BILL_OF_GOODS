@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+
+	<title>Стокова разписка</title>
+
+	<link rel='stylesheet' type='text/css' href='css/style.css' />
+	<link rel='stylesheet' type='text/css' href='css/print.css' media="print" />
+	<link rel='stylesheet' type='text/css' href='css/jquery-ui.min.css' />
+	<script type='text/javascript' src='js/jquery-3.3.1.min.js'></script>
+	<script type='text/javascript' src='js/jquery-ui.min.js'></script>
+	<script type='text/javascript' src='js/example.js'></script>
+	<script type='text/javascript' src='js/db.js'></script>
+
+</head>
+
+<body>
+
+	<div id="page-wrap">
+
+		<textarea id="header" disabled>стокова разписка</textarea>
+		<div id="date"></div>
+
+		<div id="datas">
+			<div id="customer">
+				<textarea id="customer-title">ЧАСТЕН КЛИЕНТ</textarea>
+			</div>
+
+			<div id="logo">
+				<img id="image" src="images/logo.png" alt="logo" />
+			</div>
+
+			<div id="identity">
+				<textarea id="address">
+ЕТ "ТОПЛО ПЛЮС"
+ИН: 204766386
+ДРУЖБА 2
+МОЛ: НОРА МИХАЙЛОВА
+				</textarea>
+			</div>
+		</div>
+
+		<div class="table">
+			<table id="items">
+
+				<tr>
+					<th>&numero;</th>
+					<th>Артикул</th>
+					<th>МЕ</th>
+					<th>К-во</th>
+					<th>Ед. Цена</th>
+					<th>-%</th>
+					<th>Общо</th>
+				</tr>
+				<tr class="item-row"></tr>
+				<tr id="hiderow">
+					<td colspan="7"><a id="addrow" href="javascript:;" title="Добави ред">+</a></td>
+				</tr>
+
+				<tr>
+					<td colspan="4" class="blank"> </td>
+					<td colspan="2" class="grayed">Сума: </td>
+					<td class="total-value">
+						<input id="total" value=0.00 class="grayed">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" class="blank"> </td>
+					<td colspan="2" class="grayed">ДДС:(%) </td>
+					<td class="dds-value">
+						<input id="dds" value=0.00 onclick="this.select()" class="grayed">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" class="blank"> </td>
+					<td colspan="2" class="grayed">Отстъпка:(%) </td>
+					<td class="grand-discount-value">
+						<input id="grand-discount" value=0.00 onclick="this.select()" class="grayed">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" class="blank"> </td>
+					<td colspan="3" class="grand-total-value">
+						<input id="grand-total" value=0.00>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="signatures">
+			<div class="signature-client"></div>
+			<div class="signature-owner"></div>
+		</div>
+
+	</div>
+
+</body>
+
+</html>
