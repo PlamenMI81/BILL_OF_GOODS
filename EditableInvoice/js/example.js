@@ -77,16 +77,20 @@ function updateTotal () {
 
   $('#total').val(subtotal.toFixed(2))
   let total = Number($('#total').val())
-  let dds = Number($('#dds').val()) / 100 + 1
-  let grandDiscount = Number($('#grand-discount').val()) / 100
-  let grandTotal = (total - (total * grandDiscount)) * dds
+  let dds = Number($('#dds').val().replace(',', '.'))
+  let grandDiscount = Number($('#grand-discount').val().replace(',', '.'))
+  let grandTotal = (total - (total * (grandDiscount / 100))) * (dds / 100 + 1)
+  $('#dds').val(dds)
+  $('#grand-discount').val(grandDiscount)
   $('#grand-total').val('тотал: ' + grandTotal.toFixed(2) + ' лв')
 }
 
 function updatePrice (e) {
   if (e) {
-    let value = $(e.target).val()
-    $(e.target).val(Number(value).toFixed(2))
+    let value = $(e.target).val().replace(',', '.')
+    e.target.className !== 'discount'
+      ? $(e.target).val(Number(value).toFixed(2))
+      : $(e.target).val(Number(value))
   }
   var row = $(this).parents('.item-row')
   var price = row.find('.cost').val() * row.find('.qty').val()

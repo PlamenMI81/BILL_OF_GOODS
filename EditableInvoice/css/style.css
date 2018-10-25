@@ -10,7 +10,7 @@
 }
 
 body {
-	font: 14px/1.4 Georgia, serif;
+	font: 14px/1.4 Tahoma, serif;
 	background-color: #686060;
 }
 
@@ -23,7 +23,7 @@ body {
 
 textarea {
 	border: 0;
-	font: 14px Georgia, Serif;
+	font: 14px Tahoma, Serif;
 	overflow: hidden;
 	resize: none;
 }
@@ -100,11 +100,8 @@ table th {
 	border-radius: 10px;
 }
 
-#logo {
-	border: 1px solid black;
-	border-radius: 10%;
-	height: 111px;
-	overflow: hidden;
+#image {
+	width: 13em;
 }
 
 #customer-title {
@@ -165,6 +162,8 @@ td.item-unit, td.item-qty, td.item-discount {
 
 .grayed {
 	background-color: lightgray;
+	font-style: oblique;
+	padding-left: 10px;
 }
 
 textarea:hover, textarea:focus, input:hover, input:focus {

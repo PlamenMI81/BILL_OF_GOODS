@@ -13,3 +13,7 @@ body {
 #image {
   filter: grayscale(100%) !important;
 }
+
+#version {
+  display: none;
+}
