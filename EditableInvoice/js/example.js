@@ -30,6 +30,15 @@ function addRow () {
   showDelete()
 }
 
+function showHideLogo () {
+  let value = $('#image').css('display')
+  if (value == 'none') {
+    $('#image').css('display', 'block')
+    return
+  }
+  $('#image').css('display', 'none')
+}
+
 function autocomplete (e) {
   $(e.target).autocomplete({
     source: myArray,
@@ -133,6 +142,7 @@ $(document).ready(function () {
   for (let index = 1; index <= 5; index++) {
     addRow()
   }
+  $('#cbLogo').click(showHideLogo)
   $('#addrow').click(addRow)
   $(document).keydown((e) => {
     if (e.keyCode === 45) {

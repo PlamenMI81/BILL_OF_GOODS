@@ -18,7 +18,7 @@ body {
 	max-width: 800px;
 	margin: 0 auto;
 	background-color: white;
-	padding: 40px;
+	padding: 0 40px;
 }
 
 textarea {
@@ -26,6 +26,12 @@ textarea {
 	font: 14px Tahoma, Serif;
 	overflow: hidden;
 	resize: none;
+}
+
+form span {
+	position: relative;
+	top: -10px;
+	left: 10px;
 }
 
 input, #total {
